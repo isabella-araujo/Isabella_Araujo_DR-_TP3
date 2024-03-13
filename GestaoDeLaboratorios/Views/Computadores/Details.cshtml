@@ -1,0 +1,60 @@
+﻿@model GestaoDeLaboratorios.Models.Computadores
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Computadores</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Marca
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt class = "col-sm-2">
+            Processador
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Processador)
+        </dd>
+        <dt class = "col-sm-2">
+            Placa Mãe
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlacaMae)
+        </dd>
+        <dt class = "col-sm-2">
+            Memória
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Memoria)
+        </dd>
+        <dt class = "col-sm-2">
+            HD
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HD)
+        </dd>
+        <dt class = "col-sm-2">
+            Numero de Patrimonio
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumeroPatrimonio)
+        </dd>
+        <dt class = "col-sm-2">
+            Data da Compra
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataCompra)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>

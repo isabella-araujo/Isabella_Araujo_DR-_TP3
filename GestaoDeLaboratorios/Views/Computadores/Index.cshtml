@@ -1,0 +1,71 @@
+﻿@model IEnumerable<GestaoDeLaboratorios.Models.Computadores>
+
+@{
+    ViewData["Title"] = "Computadores";
+}
+
+<h1>Cadastro de Computadores</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar novo computador</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Marca
+            </th>
+            <th>
+                Processador
+            </th>
+            <th>
+                Placa Mãe
+            </th>
+            <th>
+                Memória
+            </th>
+            <th>
+                HD
+            </th>
+            <th>
+                Número de Patrimonio
+            </th>
+            <th>
+                Data da Compra
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Processador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacaMae)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroPatrimonio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCompra)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
